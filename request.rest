@@ -1,0 +1,35 @@
+GET http://localhost:8080/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOjI0LCJuYW1lIjoiUmFkaW5kYXB0cmkiLCJlbWFpbCI6InJhZGluZGExMkBnbWFpbC5jb20iLCJpYXQiOjE3MzM1MDA2MDEsImV4cCI6MTczMzUwMDYyMX0.l9Tgg_4_964nQ7RWdCukDzuSZlnXiTdYwv662jHGPJI
+###
+
+POST  http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "username": "Radindaptri",
+  "useremail": "radinda12@gmail.com",
+  "password": "1234",
+  "confPassword": "1234",
+  "gender": "Wanita",
+  "birthdate": "2004-02-25"
+}
+
+
+###
+POST  http://localhost:8080/Login
+Content-Type: application/json
+
+{
+    "useremail": "radinda12@gmail.com",
+    "password": "1234"
+}
+
+###
+GET http://localhost:8080/token
+
+###
+DELETE http://localhost:8080/logout
+
+###
+GET http://localhost:8080/profile
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOjI0LCJuYW1lIjoiUmFkaW5kYXB0cmkiLCJlbWFpbCI6InJhZGluZGExMkBnbWFpbC5jb20iLCJpYXQiOjE3MzM1MDA2MDEsImV4cCI6MTczMzUwMDYyMX0.l9Tgg_4_964nQ7RWdCukDzuSZlnXiTdYwv662jHGPJI
